@@ -1,0 +1,19 @@
+ <Map background-color="#f2efe9" srs="+proj=latlong +datum=WGS84">
+      <FontSet name="book-fonts">
+            <Font face-name="DejaVu Sans Book" />
+      </FontSet>
+      <Style name="borders">
+            <Rule>
+                <Filter>[admin_level]='4'</Filter>
+                <LineSymbolizer stroke="#808080" stroke-width="1" stroke-linejoin="round"
+                      stroke-linecap="round" />
+            </Rule>
+      </Style>
+      <Layer name="borders" status="on" srs="+proj=latlong +datum=WGS84">
+            <StyleName>borders</StyleName>
+            <Datasource>
+                <Parameter name="type">osm</Parameter>
+                <Parameter name="file">../osm_files/admin4-140226.osm</Parameter>
+            </Datasource>
+      </Layer>
+ </Map>
